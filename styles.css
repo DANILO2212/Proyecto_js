@@ -30,7 +30,7 @@
 .main
 {
     grid-area: main;
-    height: 130vh;
+    height: 150vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -75,6 +75,8 @@
 {
     border: 2px solid black;
     border-radius: 5px;
+    width: 90%;
+    height: 100px;
     padding: 10px;
 }
 
@@ -183,12 +185,13 @@
 
 .mensaje-cont
 {
-    height: 250px;
+    height: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
+
 }
 
 .mensaje
@@ -233,10 +236,17 @@
     height: 100px;
 }
 
+
+
 @media (max-width: 768px)
 {
 
-    
+    .files
+    {
+        width: 80%;
+        height: 150px;
+        padding: 0;
+    }
 
     .txtlogo
     {

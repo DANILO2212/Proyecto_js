@@ -5,8 +5,6 @@ let cantidad = document.getElementById("cantidad");
 let formulario = document.getElementById("formulario");
 let tabla = document.getElementById("tabla");
 let impuesto = document.getElementsByName("impuesto");
-
-
 let mensaje = document.getElementById("mensaje");
 
 
@@ -17,12 +15,13 @@ let totalf;
 let totalmaster;
 
 
-// arreglo de datos
+// arreglo
 let array = [];
 
 enviar.addEventListener("click" , () => {
     event.preventDefault();
 
+    // Verificamos si hay productos
     if(producto.value.length === 0 || precio.value.length === 0 || cantidad.value.length === 0)
     {
         mensaje.style.display = "flex";
@@ -32,7 +31,7 @@ enviar.addEventListener("click" , () => {
             mensaje.style.display = "none";
         } , 1500);
     }
-    else
+    else 
     {
 
     mensaje.style.display = "flex";
@@ -62,6 +61,7 @@ enviar.addEventListener("click" , () => {
     let impu1 = 0;
     let impu2 = (totalp * 0.05);
     let impu3 = (totalp * 0.10);
+
     if(impuesto[0].checked)
     {
         timp = "0%: " + impu1 + "$";
@@ -127,10 +127,9 @@ fondo.addEventListener("change" , (e) => {
 
 let genrec = document.getElementById("genrec");
 let genpdf = document.getElementById("genpdf");
-
 let recibo = document.getElementById("recibo");
 
-
+// Generar Recibo
 genrec.addEventListener("click" , () => {
     let cantdp = 0;
     if(array.length === 0)
@@ -172,8 +171,6 @@ genrec.addEventListener("click" , () => {
     
 });
 
-
-
 function printTicket() {
     const printContents = document.querySelector('.recibo').innerHTML;
     const originalContents = document.body.innerHTML;
@@ -182,8 +179,3 @@ function printTicket() {
     window.print();
     document.body.innerHTML = originalContents;
 }
-
-
-
-
-
