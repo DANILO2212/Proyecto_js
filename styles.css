@@ -1,0 +1,327 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor
+{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header
+{
+    grid-area: header;
+    background: rgba(116, 116, 116, 0.856);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+}
+
+.main
+{
+    grid-area: main;
+    height: 130vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/fondo_default.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.formulario
+{
+    background: rgba(240, 240, 240, 0.411);
+    padding: 10px;
+    border-radius: 3px;
+    height: 600px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px black;
+    color: white;
+}
+
+.imp
+{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.imp > legend
+{
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px black;
+    font-size: 10px;
+}
+
+.files
+{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.inp1
+{
+    
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#enviar
+{
+    margin: 10px;
+    padding: 13px 30px;
+    font-size: 15px;
+    border: none;
+    background: rgb(206, 206, 206);
+    color: rgb(100, 100, 100);
+    border-radius: 5px;
+    transition: ease-in-out 0.3s;
+}
+
+#enviar:hover
+{
+    background: rgb(2, 2, 2);
+    color: rgb(241, 241, 241);
+}
+
+.tabla
+{
+    width: 80%;
+    margin-top: 10px;
+}
+
+.table
+{
+    text-align: center;
+}
+
+.footer
+{
+    grid-area: footer;
+    height: 500px;
+    width: 100%;
+    background: linear-gradient(to bottom , rgb(216, 216, 216) , rgb(255, 255, 255));
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ttl
+{
+    background-color: rgb(107, 77, 77);
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+#genpdf
+{
+    display: none;
+    width: 100px;
+    font-size: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: red;
+}
+
+#genrec
+{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: red;
+    font-size: 20px;
+}
+
+.recibo
+{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(172, 172, 172);
+    margin: 10%;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.genpdf
+{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mensaje-cont
+{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.mensaje
+{
+    position: fixed;
+    z-index: 1;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 50px;
+    width: 300px;
+    background: radial-gradient(rgb(201, 115, 115) , rgb(133, 77, 77));
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-rec
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.txtlogo
+{
+    text-shadow: 3px 3px 10px black;
+}
+
+#fondo
+{
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.imgu
+{
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 768px)
+{
+
+    
+
+    .txtlogo
+    {
+        width: 20%;
+        font-size: 16px;
+        
+    }
+
+    .genpdf
+    {
+        width: 45%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #genrec
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    #genpdf
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main
+    {
+        height: 200vh;
+        width: 100%;
+        background-position: center;
+    }
+
+    .footer
+    {
+        width: 100%;
+    }
+    .formulario
+    {
+        width: 80%;
+        height: 800px;
+       
+    }
+
+    #tabla
+    {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .files
+    {
+        width: 90%;
+        font-size: 10px;
+        padding: 10px;
+        color: white;
+        height: 80px;
+    }
+
+    .imgu
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    .recibo
+    {
+        height: 500px;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .inp1
+    {
+    
+        border: 2px solid black;
+        border-radius: 5px;
+        width: 150px;
+        height: 30px;
+    }
+    
+    #fondo
+    {
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+    }
+}
