@@ -26,7 +26,7 @@ enviar.addEventListener("click" , () => {
     if(producto.value.length === 0 || precio.value.length === 0 || cantidad.value.length === 0)
     {
         mensaje.style.display = "flex";
-        mensaje.innerHTML = "Por favor de completar los campos";
+        mensaje.innerHTML = "Favor de completar los campos";
 
         setTimeout(() => {
             mensaje.style.display = "none";
