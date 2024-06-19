@@ -36,14 +36,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(assets/fondo_default.png);
+    background-image: url(assets/bg1.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .formulario
 {
-    background: rgba(240, 240, 240, 0.411);
+    background: rgba(240, 240, 240, 0.747);
     padding: 10px;
     border-radius: 3px;
     height: 600px;
@@ -54,7 +54,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 3px 3px 10px black;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .imp
@@ -93,8 +93,8 @@
     padding: 13px 30px;
     font-size: 15px;
     border: none;
-    background: rgb(206, 206, 206);
-    color: rgb(100, 100, 100);
+    background: rgb(141, 141, 141);
+    color: rgb(24, 24, 24);
     border-radius: 5px;
     transition: ease-in-out 0.3s;
 }
@@ -185,11 +185,12 @@
 
 .mensaje-cont
 {
-    height: 100px;
+    height: 120px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    top: -70px;
     position: absolute;
 
 }
@@ -198,15 +199,47 @@
 {
     position: fixed;
     z-index: 1;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 50px;
     width: 300px;
-    background: radial-gradient(rgb(201, 115, 115) , rgb(133, 77, 77));
+    background-color: rgb(96, 184, 219);
     border-radius: 10px;
     display: none;
     justify-content: center;
     align-items: center;
+    animation: mensaje 3000ms ease-in-out;
+    transition: transform;
+}
+
+#logo
+{
+    width: 250px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+@keyframes mensaje
+{
+    0%
+    {
+        transform: translateY(-0px);
+    }
+
+    50%
+    {
+        transform: translateY(250%);
+    }
+
+    75%
+    {
+        transform: translateY(250%);
+    }
+
+    100%
+    {
+        transform: translateY(-70px);
+    }
 }
 
 .cont-rec
@@ -218,10 +251,10 @@
     align-items: center;
 }
 
-.txtlogo
+/* .txtlogo
 {
     text-shadow: 3px 3px 10px black;
-}
+} */
 
 #fondo
 {
@@ -248,12 +281,12 @@
         padding: 0;
     }
 
-    .txtlogo
+    /* .txtlogo
     {
         width: 20%;
         font-size: 16px;
         
-    }
+    } */
 
     .genpdf
     {
@@ -303,7 +336,7 @@
         width: 90%;
         font-size: 10px;
         padding: 10px;
-        color: white;
+        color: rgb(0, 0, 0);
         height: 80px;
     }
 
@@ -334,5 +367,12 @@
         padding: 5px 5px;
         border: none;
         border-radius: 5px;
+    }
+
+    #logo
+    {
+        width: 120px;
+        height: 50px;
+        
     }
 }

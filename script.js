@@ -25,17 +25,20 @@ enviar.addEventListener("click" , () => {
     if(producto.value.length === 0 || precio.value.length === 0 || cantidad.value.length === 0)
     {
         mensaje.style.display = "flex";
-        mensaje.innerHTML = "Favor de completar los campos";
+        mensaje.innerHTML = `Favor de completar los campos <i style="color: rgb(247, 244, 66); margin: 10px;" class="fas fa-exclamation-triangle"></i>`;
+        mensaje.style.backgroundColor = "#e06c6c";
 
         setTimeout(() => {
             mensaje.style.display = "none";
-        } , 1500);
+        } , 3000);
     }
     else 
     {
 
     mensaje.style.display = "flex";
-    mensaje.innerHTML = "Producto Añadido";
+    mensaje.innerHTML = `Producto Añadido <i style="color: rgb(36, 250, 100); margin: 10px;" class="fa-solid fa-check"></i>`;
+    mensaje.style.backgroundColor = "rgb(96, 184, 219)";
+
 
     setTimeout(() => {
         mensaje.style.display = "none";
@@ -135,21 +138,24 @@ genrec.addEventListener("click" , () => {
     if(array.length === 0)
     {
         mensaje.style.display = "flex";
-        mensaje.innerHTML = "No hay ningun producto :(";
+        mensaje.innerHTML = `No hay ningun producto <i style="color: rgb(247, 244, 66); margin: 10px;" class="fas fa-exclamation-triangle"></i>`;
+        mensaje.style.backgroundColor = "#e06c6c";
 
         setTimeout(() => {
             mensaje.style.display = "none";
-        } , 1500);
+        } , 3000);
     }
     else
     {
         recibo.style.display = "flex";
         mensaje.style.display = "flex";
-        mensaje.innerHTML = "Ticket generado exitosamente";
+        mensaje.style.backgroundColor = "rgb(96, 184, 219)";
+        genrec.style.display = "none";
+        mensaje.innerHTML = `Ticket generado exitosamente <i style="color: rgb(36, 250, 100); margin: 10px;" class="fa-solid fa-check"></i>`;
 
         setTimeout(() => {
             mensaje.style.display = "none";
-        } , 1500);
+        } , 3000);
         genpdf.style.display = "block";
         recibo.innerHTML = 
         `

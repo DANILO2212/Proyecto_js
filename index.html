@@ -18,13 +18,16 @@
     <div class="contenedor">
         <!-- Encabezado de la pagina -->
         <header class="header">
-             <h3 class="txtlogo"><i class="fa-solid fa-cart-shopping"></i> <br>Supermercado Danieliza</h3>
+             <!-- <h3 class="txtlogo"><i class="fa-solid fa-cart-shopping"></i> <br>Supermercado Danieliza</h3> -->
+              <div class="logo">
+                <img src="assets/Logo.png" alt="" id="logo">
+              </div>
              <div class="genpdf">
                 <button id="genrec" ><i class="fa-solid fa-receipt"></i></button>
                 <button id="genpdf" onclick="printTicket()"><i class="fa-solid fa-file-pdf"></i></button>
             </div>
         </header>
-
+        
         <!-- Contenido principal de la pagina -->
         <main class="main" id="main">
             
@@ -60,9 +63,9 @@
             <br><br>
             <div class="fondo">
                 <select name="fondo" id="fondo">
-                    <option value="assets/fondo_default.png">Fondo predeterminado</option>
-                    <option value="assets/bg1.jpeg">Fondo 1</option>
-                    <option value="assets/bg2.gif">Fondo 2</option>
+                    <option value="assets/bg1.jpg">Fondo predeterminado</option>
+                    <option value="assets/bg2.jpg">Fondo 1</option>
+                    <option value="assets/bg3.jpg">Fondo 2</option>
                     
                 </select>
             </div>
@@ -103,4 +106,4 @@
     </div>
     <script src="script.js"></script> 
 </body>
-</html>
+</html> 
