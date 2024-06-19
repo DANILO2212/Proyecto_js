@@ -375,4 +375,9 @@
         height: 50px;
         
     }
+
+    .mensaje-cont
+    {
+        width: 50%;
+    }
 }
