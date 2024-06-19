@@ -364,9 +364,11 @@
     
     #fondo
     {
-        padding: 5px 5px;
+        height: 10px;
         border: none;
         border-radius: 5px;
+        width: 100px;
+        
     }
 
     #logo
@@ -376,8 +378,4 @@
         
     }
 
-    .fondo
-    {
-        width: 50%;
-    }
 }
