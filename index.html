@@ -18,7 +18,6 @@
     <div class="contenedor">
         <!-- Encabezado de la pagina -->
         <header class="header">
-             <!-- <h3 class="txtlogo"><i class="fa-solid fa-cart-shopping"></i> <br>Supermercado Danieliza</h3> -->
               <div class="logo">
                 <img src="assets/Logo.png" alt="" id="logo">
               </div>
@@ -27,10 +26,10 @@
                 <button id="genpdf" onclick="printTicket()"><i class="fa-solid fa-file-pdf"></i></button>
             </div>
             <div class="fondo">
-                <select name="fondo" id="fondo">
-                    <option value="assets/bg1.jpg">Fondo predeterminado</option>
-                    <option value="assets/bg2.jpg">Fondo 1</option>
-                    <option value="assets/bg3.jpg">Fondo 2</option>
+                <select name="fondo" id="fondoch" onchange="cambiarfondo()">
+                    <option value="" data-image="assets/bg1.jpg">Fondo predeterminado</option>
+                    <option value="" data-image="assets/bg2.jpg">Fondo 1</option>
+                    <option value="" data-image="assets/bg3.jpg">Fondo 2</option>
                     
                 </select>
             </div>
@@ -38,39 +37,54 @@
         
         <!-- Contenido principal de la pagina -->
         <main class="main" id="main">
-            
-            <form class="formulario" id="formulario">
+
+            <form class="contenedor-3" id="form-1">
+                <div class="formulario product" id="formulario">
                 
-                <br><br>
-                <label>
-                    Producto: <input class="inp1" type="text" id="producto" >
-                </label>
-                <br>
-                <label>
-                    Cantidad: <input class="inp1" type="number" id="cantidad" >
-                </label>
-                <br>
-                <label>
-                    Precio: <input class="inp1" type="number" id="precio" >
-                </label>
-                <br>
-                <fieldset class="imp">
-                    <legend>Impuesto</legend>
-                    0% <input type="radio" name="impuesto" checked>
-                    5% <input type="radio" name="impuesto">
-                    10% <input type="radio" name="impuesto">
-                </fieldset>
-                <br><br>
-                <label class="files">
-                    Selecciona la imagen:
-                    <input type="file"  id="image" accept="image/*">
-                </label>
-                <input type="submit" id="enviar" value="Agregar">
-                
+                    <label for="products">Selecciona un producto:</label>
+                    <select id="products">
+                        <option value="selecciona" data-image="">Selecciona un producto</option>
+                        <option value="Sangre de toro" data-image="IMAGENES/pro_1.jpeg">Sangre de toro</option>
+                        <option value="Cerveza" data-image="IMAGENES/pro_2.jpeg">cerveza</option>
+                        <option value="Maruchan" data-image="IMAGENES/pro_3.jpeg">Maruchan</option>
+                        <option value="Arroz" data-image="IMAGENES/pro_4.jpeg">Arroz</option>
+                        <option value="Huevo" data-image="IMAGENES/pro_5.jpeg">Huevo</option>
+                        <option value="Coca Cola" data-image="IMAGENES/pro_6.jpeg">Coca Cola</option>
+                        <option value="Sabritas" data-image="IMAGENES/pro_7.jpeg">Sabritas</option>
+                    </select>
+    
+                    <div class="imagen-prev">
+                        <p style="font-size: 17px; text-transform: uppercase;" class="txtnom" id="txtnom"></p>
+                        <img id="productImage" src="" alt="" class="img-prev " />
+                    </div>
+        
+                    
+                    
+                    
+                </div>
+                <div class="formulario" id="formulario">
+                    
+                    <label>
+                        Cantidad: <input class="inp1" type="number" id="cantidad" >
+                    </label>
+                    <br>
+                    <label>
+                        Precio: <input class="inp1" type="number" id="precio" >
+                    </label>
+                    <br>
+                    <fieldset class="imp">
+                        <legend>Impuesto</legend>
+                        0% <input type="radio" name="impuesto" checked>
+                        5% <input type="radio" name="impuesto">
+                        10% <input type="radio" name="impuesto">
+                    </fieldset>
+                    
+                    <input type="submit" id="enviar" value="Agregar">
+                    
+                </div>
             </form>
-            <br><br>
             
-            <br><br>
+            
         </main>
 
         <!-- Pie de pagina -->
@@ -83,13 +97,14 @@
                         <th>producto</th>
                         <th>cantidad</th>
                         <th>precio</th>
+                        <th>Subtotal</th>
                         <th>impuesto</th>
                         <th>total</th>
                         <th>imagen</th>
                     </tr>
                 
               </table>
-            
+              <button class="vaciar" onclick="vaciar()">Vaciar Carrito</button>
             </div>
             <!-- Total -->
             <div class="ttl" id="ttl">
