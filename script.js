@@ -64,8 +64,8 @@ enviar.addEventListener("click" , () => {
         
     totalp = cantidad.value * precio.value;
     let imp1 = totalp;
-    let imp2 = totalp - (totalp * 0.05);
-    let imp3 = totalp - (totalp * 0.10);
+    let imp2 = totalp + (totalp * 0.05);
+    let imp3 = totalp + (totalp * 0.10);
 
     let impu1 = 0;
     let impu2 = (totalp * 0.05);
